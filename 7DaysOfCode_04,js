@@ -1,0 +1,17 @@
+const nome = prompt("Qual seu nome?");
+alert(`Olá ${nome} , esse jogo é muito simples, voce precisa dar um palpite e acertar o numero que a maquina está escondendo, tem que ser de 1 á 10 ok? Boa Sorte!`);
+
+let msg = "sim";
+
+while (msg === "sim") {
+  let numeroAleatorio = Math.floor(Math.random(1) * 2);
+  let numeroJogador = prompt("Digite seu palpite: ");
+  if (numeroJogador == numeroAleatorio) {
+    alert(`Parabéns ${nome}, voce acertou!`);
+  } else {
+    alert(` ${nome}, voce errou! numero era ${numeroAleatorio} :( `);
+  }
+  msg = prompt("Gostaria de jogar novamente? digite (sim/nao)");
+}
+
+alert("Tchau - Tchau !!!");
